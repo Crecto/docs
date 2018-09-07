@@ -141,8 +141,8 @@ class Vehicle < Crecto::Model
     end
     
     schema "vehicles" do
-        enum_field, :state, State
-        enum_field, :make, Make, column_name: "vehicle_type", column_type: Int32
+        enum_field :state, State
+        enum_field :make, Make, column_name: "vehicle_type", column_type: Int32
     end
 end
 ```
