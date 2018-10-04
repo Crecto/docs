@@ -58,9 +58,21 @@ Query.order_by("created_at DESC")
 ### `join`
 
 ```ruby
-# SELECT * FROM users INNER JOIN user_tags ON user_tags.user_id = users.id
-# WHERE user_tags.tag_name = ?
-query = Query.join(:images).where("user_tags.tag_name = ?", "crystal")
+# SELECT * FROM users INNER JOIN images ON images.user_id = users.id
+# WHERE images.file_name = ?
+class User
+  # schema ...
+  has_many :images
+end
+
+class Image
+  schema "images" do
+    field :file_name
+  end
+
+  belogns_to :user
+end
+query = Query.join(:images).where("images.file_name = ?", "crystal.jpg")
 Repo.all(User, query)
 ```
 
