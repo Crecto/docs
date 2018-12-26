@@ -94,3 +94,52 @@ Query.where(name: "Charlize").join(:posts).group_by("users.id")
 Query.preload(:images)
 ```
 
+## Nested grouped queries
+
+### `and`
+
+With a block:
+
+```ruby
+query = Query.where(foo: "bar").and do |q|
+  q.where(name: "GZA").or_where(name: "RZA")
+end
+```
+
+With multiple query objects:
+
+```ruby
+query = Query.where(foo: "bar").and(
+  Query.where(name: "GZA").or_where(name: "RZA")
+)
+```
+
+Would both produce the same query from `Repo.all(User, query)`:
+
+```sql
+SELECT users.* FROM users WHERE ((users.foo='bar') AND ((users.name='GZA') OR (users.name='RZA')))
+```
+
+### `or`
+
+With a block:
+
+```ruby
+query = Query.where(foo: "bar").or do |q|
+  q.where(foo: "baz").where(name: "ODB")
+end
+```
+
+With multiple query objects:
+
+```ruby
+query = Query.where(foo: "bar").or(
+  Query.where(foo: "baz").where(name: "ODB")
+)
+```
+
+Would both produce the same query from `Repo.all(User, query)`:
+
+```sql
+SELECT users.* FROM users WHERE ((users.foo='bar') OR ((users.foo='baz') AND (users.name='ODB')))
+```
