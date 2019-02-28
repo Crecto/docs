@@ -6,7 +6,8 @@ Add the shard to your applications `shard.yml`
 
 ```text
 dependencies:
-  crecto:    github: fridgerator/crecto
+  crecto:    
+    github: Crecto/crecto
 ```
 
 Include a database adapter:
