@@ -114,7 +114,7 @@ class User < Crecto::Model
     # primary_key : Specify a new primary key field
     field :uuid, String, primary_key: true
     
-    # virtual : This field does not exist in the database and wont be pesisted.
+    # virtual : This field does not exist in the database and wont be persisted.
     # but can be set and accessed on the model instance
     field :password_confirm, String, virtual: true
     
