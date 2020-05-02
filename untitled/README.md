@@ -18,7 +18,7 @@ module AnotherRepo
     extend Crecto::Repo
     
     config do |conf|
-        conf.adapter = Crecto::Adatperes::SQLite3
+        conf.adapter = Crecto::Adapters::SQLite3
         conf.database = "./my_db.db"
     end
 end
