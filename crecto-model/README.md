@@ -21,7 +21,7 @@ class User < Crecto::Model
 end
 ```
 
-The shema macro takes one argument and an options tuple.  The argument is the database table name.  If your database table doesn't have a primary key, you can pass an option to disable it: `schema "users", primary_key: false do`
+The schema macro takes one argument and an options tuple.  The argument is the database table name.  If your database table doesn't have a primary key, you can pass an option to disable it: `schema "users", primary_key: false do`
 
 ### Default fields
 
