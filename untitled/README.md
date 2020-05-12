@@ -5,7 +5,7 @@
 ```ruby
 module MyRepo
     extend Crecto::Repo
-    
+
     config do |conf|
         conf.adapter = Crecto::Adapters::Postgres
         # or Crecto::Adapters::Mysql, Crecto::Adapters::SQLite3
@@ -16,7 +16,7 @@ end
 
 module AnotherRepo
     extend Crecto::Repo
-    
+
     config do |conf|
         conf.adapter = Crecto::Adapters::SQLite3
         conf.database = "./my_db.db"
@@ -31,10 +31,9 @@ end
 * `database` - database name
 * `password` - database password
 * `username` - database username
-* `uri` - full uri to database, can include all config options \(i.e. `postgres://user@pass:localhost:5432/my_db?initial_pool_size=10&retry_attemps=5`\)
+* `uri` - full uri to database, can include all config options \(i.e. `postgres://username:password@localhost:5432/my_db?initial_pool_size=10&retry_attemps=5`\)
 * `hostname` - database host name
 * `initial_pool_size`
 * `max_pool_size`
 * `retry_attempts`
 * `retry_delay`
-
