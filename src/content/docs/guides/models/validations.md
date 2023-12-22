@@ -1,4 +1,6 @@
-# Validations
+---
+title: Validations
+---
 
 Crecto provides validations and constraints which are turned into `changeset` errors.
 
@@ -43,6 +45,3 @@ class User < Crecto::Model
         length: {min: 2, max: 50}
 end
 ```
-
-
-

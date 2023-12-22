@@ -1,4 +1,6 @@
-# Database Operations
+---
+title: Database Operations
+---
 
 ### `all`
 
@@ -123,11 +125,6 @@ MyRepo.aggregate(User, :count, :id, query)
 
 ### `get_association`
 
-
-
 * get\_association
 * get\_association!
 * query
-
-
-

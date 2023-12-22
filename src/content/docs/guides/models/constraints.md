@@ -1,4 +1,6 @@
-# Constraints
+---
+title: Constraints
+---
 
 Crecto provides validations and constraints which are turned into `changeset` errors.
 

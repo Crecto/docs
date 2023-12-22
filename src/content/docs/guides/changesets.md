@@ -1,4 +1,6 @@
-# Changeset
+---
+title: Changeset
+---
 
 The changeset performs validations on data objects.  If any changeset is not valid, then the database operation will not happen.
 
@@ -47,4 +49,3 @@ An array of field changes on the data object
 ### `source`
 
 A hash of the original data set
-

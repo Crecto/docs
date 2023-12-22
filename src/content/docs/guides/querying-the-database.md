@@ -1,4 +1,6 @@
-# Crecto::Repo::Query
+---
+title: Querying the Database
+---
 
 The Query class provides building robust composable query builder for retrieving and manipulate data.  
 

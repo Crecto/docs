@@ -1,4 +1,6 @@
-# Multi / Transactions
+---
+title: Multi operations and Transactions
+---
 
 Crecto provides the `Multi` class, for utilizing database transactions.
 
@@ -55,6 +57,3 @@ else
     puts "woops"
 end
 ```
-
-
-

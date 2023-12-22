@@ -1,4 +1,6 @@
-# Associations
+---
+title: Associations
+---
 
 Crecto provides helper macros for defining associations between data models.
 

@@ -1,4 +1,6 @@
-# Crecto::Model
+---
+title: Schema
+---
 
 Application data models should inherit from `Crecto::Model`
 
@@ -157,4 +159,3 @@ If you with to access attributes of a model without having to check for `nil`, i
 user.age!
 user.name!
 ```
-

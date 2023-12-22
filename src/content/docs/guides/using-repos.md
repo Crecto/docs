@@ -1,4 +1,6 @@
-# Crecto::Repo
+---
+title: Repos
+---
 
 `Crecto::Repo` maps the database to the database adapter, and is used to run queries on models.  If connections to multiple databases is required, just create a separate Repo for each.  The `config` block defines how the repo connects to the database.
 

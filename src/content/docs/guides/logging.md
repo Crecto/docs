@@ -1,4 +1,6 @@
-# Logging
+---
+title: Logging
+---
 
 By default, Crecto does not log anything.  To enable, pass any type of `IO` to the log handler.
 
@@ -15,4 +17,3 @@ file = File.open("database.log", "w")
 f.sync = true
 Crecto::DbLogger.set_handler(file)
 ```
-
