@@ -7,6 +7,16 @@ export default defineConfig({
 		starlight({
 			title: 'Crecto',
 			favicon: 'favicon.ico',
+			head: [
+				{
+					tag: 'script',
+					attrs: {
+						src: 'https://analytics.watzon.tech/script.js',
+						'data-website-id': '6fa9c478-7b01-4a2b-88b4-3892e055ad4d',
+						async: true,
+					},
+				},
+			],
 			social: {
 				github: 'https://github.com/Crecto/crecto',
 			},
